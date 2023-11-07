@@ -51,3 +51,32 @@ you do not need to specify what type this variable is.
  Javascript engine infers what type this variable is based on the value assigned to at run time.
 */
 
+// <-----------------------Stack and Heap Memory----------------------->
+
+// Stack(Primitive) , Heap(Non-Primitive)
+
+/*Stack:Data is stored with copies, not references.
+Changes to data in the stack don't affect the original data.*/
+
+let myYoutubename = "hiteshchoudhary.com";
+
+let anothername = myYoutubename
+anothername = "chaiaurcode";
+
+console.log(myYoutubename);//hiteshchoudhary.com
+console.log(anothername);//chaiaurcode
+
+/*Heap:Data is stored with references to the actual data.
+Changes to data in the heap directly affect the original data.*/
+
+let userOne = {
+    email: "user@google.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email ="hitesh@google.com"
+
+console.log(userOne.email);//hitesh@google.com
+console.log(userTwo.email);//hitesh@google.com
