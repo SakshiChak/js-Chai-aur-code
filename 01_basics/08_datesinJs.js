@@ -51,3 +51,14 @@ let weekday = newDate.toLocaleString('default', {
 console.log(`Today is ${weekday}`);
 
 console.log(newDate.toUTCString()); // Convert the date to a UTC string -->Thu, 09 Nov 2023 09:25:19 GMT
+
+// Get current UTC time
+let utcDate = new Date();
+
+// Convert UTC time to Indian Standard Time (IST)
+let istDateString = utcDate.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
+
+// Print the result
+console.log(`UTC Time: ${utcDate.toUTCString()}`);
+console.log(`Indian Standard Time (IST): ${istDateString}`);
+
