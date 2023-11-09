@@ -38,6 +38,34 @@ console.log(myArr.indexOf(3));
 const newArr = myArr.join();
 console.log(newArr);//0,1,2,3,4,5
 
+// Reversing an array
+const reversedArray = myArr.reverse();
+console.log("Reversed Array:", reversedArray);
+
+// Sorting an array (note: sorts elements as strings by default)
+const sortedArray = myArr.sort();
+console.log("Sorted Array:", sortedArray);
+
+// Finding the first element that satisfies a condition
+const findResult = myArr.find(element => element > 3);
+console.log("First Element > 3:", findResult);
+
+// Mapping elements of an array to a new array
+const mappedArray = myArr.map(element => element * 2);
+console.log("Mapped Array (doubled):", mappedArray);
+
+// Filtering elements based on a condition
+const filteredArray = myArr.filter(element => element > 2);
+console.log("Filtered Array (>2):", filteredArray);
+
+// Checking if all elements satisfy a condition
+const allElementsGreaterThanZero = myArr.every(element => element > 0);
+console.log("All elements > 0:", allElementsGreaterThanZero);
+
+// Checking if at least one element satisfies a condition
+const someElementsGreaterThanFour = myArr.some(element => element > 4);
+console.log("Some elements > 4:", someElementsGreaterThanFour);
+
 // Slice and Splice
 
 console.log("Original Array:", myArr);//[ 0, 1, 2, 3, 4, 5 ]
