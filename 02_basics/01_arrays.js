@@ -40,7 +40,7 @@ console.log(newArr);//0,1,2,3,4,5
 
 // Reversing an array
 const reversedArray = myArr.reverse();
-console.log("Reversed Array:", reversedArray);
+console.log("Reversed Array:", reversedArray);// [6, 5, 4, 3, 2, 1, 0]
 
 // Sorting an array (note: sorts elements as strings by default)
 const sortedArray = myArr.sort();
@@ -48,23 +48,23 @@ console.log("Sorted Array:", sortedArray);
 
 // Finding the first element that satisfies a condition
 const findResult = myArr.find(element => element > 3);
-console.log("First Element > 3:", findResult);
+console.log("First Element > 3:", findResult);//4
 
 // Mapping elements of an array to a new array
 const mappedArray = myArr.map(element => element * 2);
-console.log("Mapped Array (doubled):", mappedArray);
+console.log("Mapped Array (doubled):", mappedArray);//[0,  2,  4, 6, 8, 10, 12]
 
 // Filtering elements based on a condition
 const filteredArray = myArr.filter(element => element > 2);
-console.log("Filtered Array (>2):", filteredArray);
+console.log("Filtered Array (>2):", filteredArray);//[ 3, 4, 5, 6 ]
 
 // Checking if all elements satisfy a condition
 const allElementsGreaterThanZero = myArr.every(element => element > 0);
-console.log("All elements > 0:", allElementsGreaterThanZero);
+console.log("All elements > 0:", allElementsGreaterThanZero);// false
 
 // Checking if at least one element satisfies a condition
 const someElementsGreaterThanFour = myArr.some(element => element > 4);
-console.log("Some elements > 4:", someElementsGreaterThanFour);
+console.log("Some elements > 4:", someElementsGreaterThanFour);// true
 
 // Slice and Splice
 
