@@ -9,12 +9,12 @@ const dc_heros = ["superman", "flash", "batman"]
 // console.log(marvel_heros[3][1]);
 
 // Concatenate Marvel and DC heroes arrays using concat method
-// const allHeros = marvel_heros.concat(dc_heros)
-// console.log(allHeros);
+const allHeros = marvel_heros.concat(dc_heros)
+console.log(allHeros);
 
 // Combine Marvel and DC heroes arrays using the spread operator
 const all_new_heros = [...marvel_heros, ...dc_heros]
-// console.log(all_new_heros);
+console.log(all_new_heros);
 
 // Nested array with multiple levels
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
