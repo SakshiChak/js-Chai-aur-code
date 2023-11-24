@@ -47,8 +47,8 @@ const user = {
 //  an arrow function returning an object
 
 // const addTwo = (num1, num2) => {username: "hitesh"};// undefined (needed to wrap obj in parenthesis)
-// const addTwo = (num1, num2) => ({username: "hitesh"});
-// console.log(addTwo(3, 4));
+const addTwo = (num1, num2) => ({username: "hitesh"});
+console.log(addTwo(3, 4));
 
 //  forEach method on an array
 // const myArray = [2, 5, 3, 7, 8];
