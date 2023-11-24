@@ -57,11 +57,11 @@ const user = {
 
 // Function to handle an object and log its properties
 function handleObject(anyobject){
-    // console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
 // call the handleObject function with the 'user' object
-// handleObject(user)
+handleObject(user)
 
 // Call the handleObject function with an inline object
 handleObject({
