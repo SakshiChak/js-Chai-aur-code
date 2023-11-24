@@ -10,17 +10,31 @@
     
 </body>
 <script>
+    // JavaScript code for dynamic element creation and manipulation
+
+    // 1. Creating a new element div
     const div = document.createElement('div')
     console.log(div);
-    div.className = "main"
-    div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")
-    div.style.backgroundColor = "green"
-    div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
 
-    document.body.appendChild(div)
+    // 2. Setting properties of the new element div
+    div.className = "main"; // Add a class to the div
+    div.id = Math.round(Math.random() * 10 + 1); // Generate a random ID for the div
+    div.setAttribute("title", "generated title"); // Set a title attribute for the div
+    div.style.backgroundColor = "green"; // Set the background color of the div
+    div.style.padding = "12px"; // Set padding for the div
+
+    // Adding text to the div in two ways:
+
+    // a. By setting innerText property
+    // div.innerText = "Chai aur code";
+
+    // b. By creating a text node and appending it to the div
+    const addText = document.createTextNode("Chai aur code");
+    div.appendChild(addText);
+
+    // The div has been created in memory, but it needs to be attached to the page manually
+
+    // 3. Attaching the div to the page by appending it to the body
+    document.body.appendChild(div);
 </script>
 </html>
