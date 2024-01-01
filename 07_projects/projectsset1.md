@@ -175,5 +175,73 @@ function newGame() {
   });
 }
 
+```
+## project 5
+
+```javascript
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    
+  </table>
+    </div>
+  `;
+});
+
+```
+
+## project 6
+
+```javascript
+
+// Function to generate a random color in hex format
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+// Variable to store the interval ID
+let intervalId;
+
+// Function to start changing the background color at regular intervals
+const startChangingColor = function () {
+  // Set an interval to call the changeBgColor function every 1000 milliseconds (1 second)
+  intervalId = setInterval(changeBgColor, 1000);
+  
+  // Function to change the background color using the randomColor function
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+// Function to stop changing the background color
+const stopChangingColor = function () {
+  // Clear the interval using the stored interval ID
+  clearInterval(intervalId);
+};
+
+// Event listener for the "Start" button, calling the startChangingColor function
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+// Event listener for the "Stop" button, calling the stopChangingColor function
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
 
 ```
