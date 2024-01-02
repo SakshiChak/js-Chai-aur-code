@@ -12,18 +12,18 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            /* background-color: #c2b6b6; */
         }
 
         #github-card {
             width: 300px;
+            height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             padding: 20px;
-            background: linear-gradient(to bottom, #ecf0f1, #1a73ae);
-            border-radius: 15px;
+            background: linear-gradient(to bottom, #ecf0f1, #398fc7);
+            border-radius: 25px;
             border-left: 8px solid #3498db;
             border-right: 8px solid #3498db;
             border-top: 8px solid #042e4b;
@@ -43,32 +43,18 @@
             margin-bottom: 15px;
         }
 
-
         #user-avatar {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin: 10px auto;
             border: 4px solid #ddd;
+            background: linear-gradient(to bottom, #ddd, #bbb);
             transition: transform 0.3s ease-in-out;
         }
 
         #github-card:hover #user-avatar {
             transform: scale(1.1);
-        }
-
-        #github-link:hover #github-logo {
-            animation: rotate 0.5s ease-in-out;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
         }
 
         #follower-count {
@@ -89,19 +75,33 @@
             margin-right: 5px;
         }
 
+
+
         #github-link {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            color: #222;
             text-decoration: none;
             font-size: 14px;
+            border-radius: 8px;
+            /* Rounded corners for GitHub link */
+            padding: 8px;
+            transition: background-color 0.3s ease-in-out;
         }
 
         #github-link:hover {
-            color: #f2f4ea;
+            color: #fff;
+            background-color: #330e63;
+            /* Background color on hover */
+        }
+
+        #github-link:hover #github-logo {
+            filter: invert(100%);
+            /* Invert the color on hover */
         }
     </style>
+
 </head>
 
 <body>
