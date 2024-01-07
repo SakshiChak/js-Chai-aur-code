@@ -20,9 +20,17 @@
     // }
     // init();
 
+    /*  Lexical scoping does not allow access to variables declared inside a 
+        function in the outer scope.Lexical scoping in JavaScript ensures   
+        that variables are accessible within the scope where they are       
+        defined or within nested scopes, but not outside those scopes.
+    */
+    
     // function outer(){
     //     let username = "hitesh"
     //     console.log("OUTER", secret);
+    /* Inner function have their own execution context and share memory with 
+    the outer function*/
     //     function inner(){
     //         let secret = "my123"
     //         console.log("inner", username);
@@ -38,6 +46,9 @@
     // outer()
     // console.log("TOO OUTER", username);
 
+    /* Closure is created when a function is returned from another function, 
+    preserving the lexical scope even after the outer function has finished 
+    execution.*/
 
     // function makeFunc() {
     //     const name = "Mozilla";
@@ -51,6 +62,7 @@
     // myFunc();
 
     </script>
+
     <script>
         // document.getElementById("orange").onclick = function(){
         //     document.body.style.backgroundColor = `orange`
@@ -58,6 +70,9 @@
         // document.getElementById("green").onclick = function(){
         //     document.body.style.backgroundColor = `green`
         // }
+
+        /*closure allows a function to retain access to variable from its 
+        lexical scope*/
 
         function clickHandler(color){
             // document.body.style.backgroundColor = `${color}`
