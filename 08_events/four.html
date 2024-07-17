@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .project {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .key {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .color {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1rem;
+            min-width: 400px;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #009879;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+    <title>Keydown Event Example</title>
+</head>
+
+<body>
+    
+    <div class="project">
+        <h1>Keydown Event Example</h1>
+        <div id="insert">
+            <div class="key">Press any key to see the keydown event properties</div>
+        </div>
+    </div>
+
+    <script>
+        const insert = document.getElementById('insert');
+
+        window.addEventListener('keydown', (e) => {
+            insert.innerHTML = `
+                <div class='color'>
+                    <table>
+                        <tr>
+                            <th>Key</th>
+                            <th>Keycode</th> 
+                            <th>Code</th>
+                        </tr>
+                        <tr class="active-row">
+                            <td>${e.key === ' ' ? 'Space' : e.key}</td>
+                            <td>${e.keyCode}</td> 
+                            <td>${e.code}</td>
+                        </tr>
+                    </table>
+                </div>
+            `;
+        });
+    </script>
+</body>
+
+</html>
