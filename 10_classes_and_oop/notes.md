@@ -35,14 +35,14 @@ Object-Oriented Programming is utilized to avoid spaghetti code and create modul
 ## 4 Pillars of OOP
 
 1. **Abstraction:**
-   - Simplifying complex systems by modeling classes based on real-world entities.
+   - Hiding complex implementation details and showing only the necessary features.
 
 2. **Encapsulation:**
-   - Bundling data (properties) and methods that operate on the data into a single unit (class).
+   - Wrapping data and methods into a single unit or class.
 
 3. **Inheritance:**
-   - A mechanism for creating a new class that is a modified version of an existing class.
+   - Objects can inherit properties and methods from another object.
 
 4. **Polymorphism:**
-   - The ability of different objects to be treated as instances of the same class.
+   - The ability to call the same method on different objects and have each of them respond in their own way.
 
